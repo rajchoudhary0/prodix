@@ -1,0 +1,37 @@
+<app-header></app-header>
+<div class="showcase">
+    <div class="container">
+        <form class="dix">
+            <input name="" type="text" [formControl]="myControl" [matAutocomplete]="auto" (keyup)="updated()"
+                [(ngModel)]="search" placeholder="Search" />
+            <mat-autocomplete #auto="matAutocomplete">
+                <mat-option *ngFor="let option of options" [value]="option">
+                    {{ option }}
+                </mat-option>
+            </mat-autocomplete>
+            <input name="" type="submit" value="Search" (click)="onSearch()"/>
+        </form>
+        <div class="lower">
+            <div class="word-list">
+                <ul>
+                    <li class="eng"> {{ title_1 }} <i class="fas fa-volume-down" (click)="playAudio()"></i></li>
+                    <li class="pronon"><span>{{ title_3 }}</span></li>
+                    <li class="title">-----<span></span></li>
+                    <li class="spani"><span>{{ title_2 }}</span></li>
+                </ul>
+            </div>
+            <div class="btn-group btn-desktop">
+                <button class="btn" (click)="getPrvcWord()"><i class="fas fa-chevron-left"></i>Previous Word</button>
+                <button class="btn" (click)="getRandomWord()"><i class="fas fa-infinity"></i>Random Word</button>
+                <button class="btn" (click)="getNextWord()">Next Word<i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="btn-group btn-mobile">
+                <button class="btn" (click)="getPrvcWord()"><i class="fas fa-chevron-left"></i></button>
+                <button class="btn" (click)="getRandomWord()"><i class="fas fa-infinity"></i>Random Word</button>
+                <button class="btn" (click)="getNextWord()"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<app-footer></app-footer>
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>

@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+a{
+    cursor: pointer;
+}
+body {
+    font-size: 16px;
+    color: #000;
+    line-height: 1.6em;
+}
+.showcase {
+    min-height: 86vh;
+    display: flex;
+    align-items: center;
+    background-color: #ececec;
+}
+
+.container {
+    width: 70vw;
+    /* height: 80vh; */
+    margin: 2rem auto;
+    background: linear-gradient(122.95deg, #419FFB 21.26%, #36618A 80.37%, #83C9F4 99.56%);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.container h2 {
+    font-size: 2rem;
+    text-align: center;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 2rem;
+    letter-spacing: 2px;
+    font-weight: 500;
+}
+
+.dix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dix input[type=text] {
+    /* display: flex; */
+    height: 3rem;
+    width: 50%;
+    padding: 5px 20px;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 6px;
+    /* margin: 3rem auto 2rem; */
+    margin: 3rem -105px 3rem;
+    margin-left: inherit;
+}
+
+.dix input[type=submit] {
+    border: none;
+    padding: 10px 23px;
+    background-color: #419FFB;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.container .lower {
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+
+.word-list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3rem 0 1rem 15%;
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.word-list ul .eng {
+    font-size: 1.5rem;
+    color: #23374D, 100%;
+    font-weight: 600;
+    padding-bottom: 1rem;
+}
+
+.word-list ul li {
+    color: #23374D;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.word-list ul li span {
+    /* padding-left: 1rem; */
+    font-weight: 600;
+}
+
+.fa-volume-down {
+    padding: 10px 14px;
+    border-radius: 50%;
+    margin: 0 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.329);
+    cursor: pointer;
+}
+
+.btn-group {
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.btn {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    background-color: #419FFB;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn-mobile {
+    display: none;
+}
+.btn .fas {
+    padding: 0 0.5rem;
+}
+
+@media screen and (max-width:850px) {
+    .btn-group {
+        gap: 1rem;
+        align-items: center;
+    }
+    .container {
+        width: 80vw;
+    }
+    .dix input[type=text] {
+        width: 70vw;
+    }
+    .btn-desktop {
+        display: none;
+    }
+    .btn-mobile {
+        display: flex;
+        align-items: center;
+    }
+    .btn {
+        padding: 10px;
+        font-size: 1rem;
+    }
+    .pronon, .spani, .title {
+        display: flex;
+        flex-direction: column;
+    }
+    .word-list ul li span {
+        padding-left: 0;
+        font-weight: 600;
+    }
+    .dix input[type=text] {
+        margin-left: inherit;
+    }
+    .contact {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 2rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .container {
+        width: 85vw;
+    }
+    .dix input[type=text] {
+        width: 90%;
+    }
+  
+    .head-content {
+        text-align: center;
+        line-height: 1.6em;
+        font-size: 1.8em;
+        /* display: grid; */
+        align-self: center;
+        /* padding-top: 1em; */
+        text-shadow: 3px 2px 15px #54536f;
+    }
+    .content {
+        min-height: 100vh;
+        color: #fff;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* grid-template-areas: "head para para"; */
+        justify-content: center;
+        padding: 4%;
+    }
+    .text-para {
+        font-size: 1.4em;
+        float: right;
+        line-height: 1.6em;
+        grid-area: para;
+        padding-left: 2%;
+        box-sizing: border-box;
+        text-align: justify;
+        padding: 4%;
+    }
+}

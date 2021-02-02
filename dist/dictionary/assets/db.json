@@ -1,0 +1,12 @@
+{
+    "posts": [
+      { "id": 1, "hostname": "test.example", "ip":"222.44.44.4","cpu": "32GB","ram":"4GB","location":"abc" }
+    ],
+    "comments": [
+      { "id": 1, "body": "some comment", "postId": 1 }
+    ],
+    "profile": { "name": "typicode" }
+  }
+
+
+
